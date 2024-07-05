@@ -64,3 +64,10 @@ Como estaba usando listas, que no hemos dado EDA1, he decidido cambiar el funcio
 - Editado hamburguesaManager para que funcione con nodos y eliminadas las listas
   
 - Editado tambien restaurante para cumplir con los cambios en hamburguesaManager
+
+
+
+### Commit 6: Añadidas pruebas de que funciona el programa
+
+
+En la clase restaurante se demuestra que el CRUD esta bien implementado
