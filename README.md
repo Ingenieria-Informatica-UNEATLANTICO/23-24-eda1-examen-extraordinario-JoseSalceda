@@ -1,8 +1,6 @@
-Refactorización del Sistema de Gestión de Hamburguesas
+## Refactorización del Sistema de Gestión de Hamburguesas
 
-
-
-Commit 1: Planificación inicial
+### Commit 1: Planificación inicial
 
 
 He añadido todas las clases para poder realizar los cambios necesarios.
@@ -19,7 +17,7 @@ Tengo pensado :
 
 
 
-Commit 2: Creación de HamburgesaManager
+### Commit 2: Creación de HamburgesaManager
 
 
 He creado una nueva clase llamada HamburgesaManager. Esta clase utiliza una List para almacenar múltiples hamburguesas. He implementado métodos CRUD directamente:
@@ -34,7 +32,18 @@ He creado una nueva clase llamada HamburgesaManager. Esta clase utiliza una List
 
 
 
-Commit 3: Modificación de la clase Cocinero
+### Commit 3: Modificación de la clase Cocinero
 
 
 He actualizado la clase Cocinero para que utilice el HamburguesaManager. En lugar de crear directamente una Hamburguesa, el Cocinero ahora usa el HamburguesaManager para crear y cambiar las hamburguesas.
+
+
+
+### Commit 4: Actualización de la clase Restaurante
+
+
+He modificado la clase Restaurante para que sea el punto central de interacción del sistema. Los cambios incluyen:
+
+-Iniciar HamburguesaManager.
+-Pasar el HamburguesaManager hacia Cocinero.
+-Implementar métodos para usa las operaciones CRUD en HamburguesaManager.
