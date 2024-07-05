@@ -22,13 +22,13 @@ Tengo pensado :
 
 He creado una nueva clase llamada HamburgesaManager. Esta clase utiliza una List para almacenar múltiples hamburguesas. He implementado métodos CRUD directamente:
 
--crearHamburguesa: Para añadir una nueva hamburguesa a la lista.
+- crearHamburguesa: Para añadir una nueva hamburguesa a la lista.
 
--obtenerHamburguesa y obtenerTodasLasHamburguesas: Para leer hamburguesas.
+- obtenerHamburguesa y obtenerTodasLasHamburguesas: Para leer hamburguesas.
 
--actualizarHamburguesa: Para actualizar una hamburguesa existente.
+- actualizarHamburguesa: Para actualizar una hamburguesa existente.
 
--eliminarHamburguesa: Para eliminar una hamburguesa de la lista.
+- eliminarHamburguesa: Para eliminar una hamburguesa de la lista.
 
 
 
@@ -44,8 +44,23 @@ He actualizado la clase Cocinero para que utilice el HamburguesaManager. En luga
 
 He modificado la clase Restaurante para que sea el punto central de interacción del sistema. Los cambios incluyen:
 
--Iniciar HamburguesaManager.
+- Iniciar HamburguesaManager.
 
--Pasar el HamburguesaManager hacia Cocinero.
+- Pasar el HamburguesaManager hacia Cocinero.
 
--Implementar métodos para usa las operaciones CRUD en HamburguesaManager.
+- Implementar métodos para usa las operaciones CRUD en HamburguesaManager.
+
+
+
+### Commit 5: Modificacion del programa (Listas a Nodos)
+
+
+Borrado el plantuml anterior, que se me habia olvidado mencionar antes que había creado
+
+Como estaba usando listas, que no hemos dado EDA1, he decidido cambiar el funcionamiento del programa para que use nodos. 
+
+- Añadido node.java
+  
+- Editado hamburguesaManager para que funcione con nodos y eliminadas las listas
+  
+- Editado tambien restaurante para cumplir con los cambios en hamburguesaManager
