@@ -1,6 +1,6 @@
 package src;
 
-class Restaurante {
+public class Restaurante {
     private HamburguesaManager hamburguesaManager;
 
     public Restaurante() {
@@ -38,7 +38,8 @@ class Restaurante {
     }
 
     public void mostrarTodasLasHamburguesas() {
-        for (Hamburguesa hamburguesa : hamburguesaManager.obtenerTodasLasHamburguesas()) {
+        Hamburguesa[] hamburguesas = hamburguesaManager.obtenerTodasLasHamburguesas();
+        for (Hamburguesa hamburguesa : hamburguesas) {
             System.out.println(hamburguesa.describir());
             hamburguesa.mostrar();
             System.out.println();
