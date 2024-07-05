@@ -45,5 +45,7 @@ He actualizado la clase Cocinero para que utilice el HamburguesaManager. En luga
 He modificado la clase Restaurante para que sea el punto central de interacción del sistema. Los cambios incluyen:
 
 -Iniciar HamburguesaManager.
+
 -Pasar el HamburguesaManager hacia Cocinero.
+
 -Implementar métodos para usa las operaciones CRUD en HamburguesaManager.
