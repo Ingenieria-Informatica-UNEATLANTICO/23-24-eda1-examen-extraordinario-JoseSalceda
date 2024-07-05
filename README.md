@@ -1,5 +1,7 @@
 Refactorización del Sistema de Gestión de Hamburguesas
 
+
+
 Commit 1: Planificación inicial
 
 
@@ -16,6 +18,7 @@ Tengo pensado :
 -Implementar operaciones CRUD.
 
 
+
 Commit 2: Creación de HamburgesaManager
 
 
@@ -28,3 +31,10 @@ He creado una nueva clase llamada HamburgesaManager. Esta clase utiliza una List
 -actualizarHamburguesa: Para actualizar una hamburguesa existente.
 
 -eliminarHamburguesa: Para eliminar una hamburguesa de la lista.
+
+
+
+Commit 3: Modificación de la clase Cocinero
+
+
+He actualizado la clase Cocinero para que utilice el HamburguesaManager. En lugar de crear directamente una Hamburguesa, el Cocinero ahora usa el HamburguesaManager para crear y cambiar las hamburguesas.
