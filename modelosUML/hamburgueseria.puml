@@ -1,0 +1,80 @@
+@startuml
+class Ingrediente {
+        <<abstract>>
+        +String nombre
+        +describir()
+        +mostrar()
+    }
+    class Pan {
+        <<abstract>>
+    }
+    class Carne {
+        <<abstract>>
+        -String coccion
+    }
+    class Extra {
+        <<abstract>>
+    }
+    class Queso {
+        <<abstract>>
+    }
+    class Salsa {
+        <<abstract>>
+        -String cantidad
+    }
+    class Hamburguesa {
+        -Pan[] panes
+        -Carne carne
+        -Extra[] extras
+        +agregarExtra(Extra)
+        +mostrar()
+        +describir()
+    }
+    class Empleado {
+        <<abstract>>
+        #boolean tieneHamburguesa
+    }
+    class Cocinero {
+        -HamburguesaManager hamburguesaManager
+        +prepararHamburguesa()
+        +entregar()
+    }
+    class Camarero {
+        +recibir(Hamburguesa)
+        +servir()
+    }
+    class Restaurante {
+        -HamburguesaManager hamburguesaManager
+        -atender()
+        +main()
+        +crearNuevaHamburguesa()
+        +obtenerHamburguesa()
+        +actualizarHamburguesa()
+        +eliminarHamburguesa()
+        +mostrarTodasLasHamburguesas()
+    }
+    class HamburguesaManager {
+        -List~Hamburguesa~ hamburguesas
+        +crearHamburguesa()
+        +obtenerHamburguesa()
+        +obtenerTodasLasHamburguesas()
+        +actualizarHamburguesa()
+        +eliminarHamburguesa()
+        +agregarExtraAHamburguesa()
+    }
+    Ingrediente <|-- Pan
+    Ingrediente <|-- Carne
+    Ingrediente <|-- Extra
+    Extra <|-- Queso
+    Extra <|-- Salsa
+    Empleado <|-- Cocinero
+    Empleado <|-- Camarero
+    Restaurante --> Cocinero
+    Restaurante --> Camarero
+    Restaurante --> HamburguesaManager
+    Cocinero --> HamburguesaManager
+    HamburguesaManager --> Hamburguesa
+    Hamburguesa --> Pan
+    Hamburguesa --> Carne
+    Hamburguesa --> Extra
+@enduml
